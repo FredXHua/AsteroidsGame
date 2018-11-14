@@ -4,6 +4,7 @@ int timer = 0;
 public void setup() 
 {
   size(500, 500);
+  frameRate(60);
   rocket = new Spaceship();
   shine = new Star[150];
   for (int i=0; i < shine.length; i++)
