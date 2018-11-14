@@ -1,6 +1,6 @@
-Spaceship rocket;
 Star[] shine;
-int timer = 0;
+Spaceship rocket;
+
 public void setup() 
 {
   size(500, 500);
@@ -20,13 +20,10 @@ public void draw()
 }
 public void keyPressed() {
   if (key == 'e') {
-    if (timer == 0) {
       rocket.hyperSpace();
-      timer = 1;
-    }
   }
   if (key == 'w') {
-    rocket.accelerate(0.2);
+    rocket.accelerate(0.3);
   }
   if (key == 's'){
     rocket.accelerate(-0.08);
@@ -39,12 +36,5 @@ public void keyPressed() {
   }
   
 }
-public void timer(){
-    if (timer > 0 && timer < 30)
-  {
-    timer = timer + 1;
-  }
-  if (timer == 30)
-    timer = 0;
-}
+
 
