@@ -35,9 +35,6 @@ class Star //note that this class does NOT extend Floater
     y = (float)Math.random()*500;
     opacity = (float)Math.random()*255;
     size = (float)Math.random()*2.2+1;
-    colora = (int)(Math.random()*150)+100;
-    colorb = (int)(Math.random()*150)+100;
-    colorc = (int)(Math.random()*150)+100;
     counter = 0;
     sp = (float)Math.random()+0.5;
     change = (float)Math.random()*4+0.2;
