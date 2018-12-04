@@ -1,6 +1,6 @@
 class Asteroids extends Floater{
-private int rotateSpeed;
-private int s  = (int)(Math.random()*4);
+    public int rotateSpeed;
+    public int s  = (int)(Math.random()*4)+2;
 public Asteroids(){
     myCenterX = (int)(Math.random()*500);
     myCenterY = (int)(Math.random()*500);
@@ -10,9 +10,9 @@ public Asteroids(){
     xCorners = xS;
     yCorners = yS;
     myColor = color(120);
-    rotateSpeed = (int)(Math.random()*7)-3; 
-    myDirectionX = (Math.random()*7)-3;
-    myDirectionY = (Math.random()*7)-3;
+    rotateSpeed = (int)(Math.random()*4)-2; 
+    myDirectionX = (Math.random()*2)-1;
+    myDirectionY = (Math.random()*2)-1;
     myPointDirection = 0;
  }   
     public void setX(int x){myCenterX = x;}  

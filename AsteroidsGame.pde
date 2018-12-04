@@ -1,6 +1,6 @@
 Star[] shine;
 Spaceship rocket;
-Asteroids rock;
+Asteroids[] rock;
 boolean ePressed, wPressed, aPressed, sPressed, dPressed = false;
 
 public void setup() 
@@ -18,18 +18,18 @@ public void setup()
 public void draw() 
 {
   background(20);
-  if(wPressed == true){rocket.accelerate(0.15);}
+  if(wPressed == true){rocket.accelerate(0.10);}
   if(sPressed == true){rocket.accelerate(-0.03);}
-  if(aPressed == true){rocket.turn(-5);}
-  if(dPressed == true){rocket.turn(5);}
+  if(aPressed == true){rocket.turn(-4);}
+  if(dPressed == true){rocket.turn(4);}
   for (int i=0; i < shine.length; i++)
   shine[i].show();
-  for(int n = 0; n < rock.length; n++)
+  for(int n = 0; n < rock.length; n++){
   rock[n].show();
   rock[n].move();   
+ }
   rocket.show();
   rocket.move();
-
 }
 public void keyPressed(){
   if (key == 'e') {
