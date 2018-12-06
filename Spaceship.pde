@@ -29,6 +29,5 @@ class Spaceship extends Floater{
      	for (int i=0; i < shine.length; i++)
      	shine[i].reset();
     } 
-
 }
 

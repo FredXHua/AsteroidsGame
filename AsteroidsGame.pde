@@ -30,6 +30,13 @@ public void draw()
  }
   rocket.show();
   rocket.move();
+  collide();
+}
+public void collide(){
+  for(int i = 0; i < rock.length; i++){
+    if(dist(rock[i].getX(), rock[i].getY(), rocket.getX(), rocket.getY()) <= 10)
+    rock.remove(i);
+  }
 }
 public void keyPressed(){
   if (key == 'e') {
