@@ -1,6 +1,6 @@
 Star[] shine;
 Spaceship rocket;
-Asteroids[] rock;
+ArrayList <Asteroids> rock;
 boolean ePressed, wPressed, aPressed, sPressed, dPressed = false;
 
 public void setup() 
@@ -9,11 +9,11 @@ public void setup()
   frameRate(60);
   rocket = new Spaceship();
   shine = new Star[130];
-  rock = new Asteroids[13];
+  rock = new ArrayList <Asteroids>();
   for(int i = 0; i < shine.length; i++)
     shine[i] = new Star();
-  for(int n = 0; n < rock.length; n++)
-    rock[n] = new Asteroids();
+  for(int n = 0; n < 15; n++)
+    rock.add(new Asteroids());
 }
 public void draw() 
 {
@@ -24,17 +24,17 @@ public void draw()
   if(dPressed == true){rocket.turn(4);}
   for (int i=0; i < shine.length; i++)
   shine[i].show();
-  for(int n = 0; n < rock.length; n++){
-  rock[n].show();
-  rock[n].move();   
+  for(int n = 0; n < rock.size(); n++){
+  rock.get(n).show();
+  rock.get(n).move();   
  }
   rocket.show();
   rocket.move();
   collide();
 }
 public void collide(){
-  for(int i = 0; i < rock.length; i++){
-    if(dist(rock[i].getX(), rock[i].getY(), rocket.getX(), rocket.getY()) <= 10)
+  for(int i = 0; i < rock.size(); i++){
+    if(dist(rock.get(i).getX(), rock.get(i).getY(), rocket.getX(), rocket.getY()) <= 20)
     rock.remove(i);
   }
 }
