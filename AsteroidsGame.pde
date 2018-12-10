@@ -40,7 +40,6 @@ public void collide(){
 }
 public void keyPressed(){
   if (key == 'e') {
-    
     rocket.hyperSpace(); 
   }
   if (key == 'w') {
@@ -57,9 +56,6 @@ public void keyPressed(){
   }
 }
 public void keyReleased(){
-  if (key == 'e') {
-    ePressed = false; 
-  }
   if (key == 'w') {
     wPressed = false; 
   }
