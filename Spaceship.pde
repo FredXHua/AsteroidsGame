@@ -22,20 +22,15 @@ class Spaceship extends Floater{
     public double getPointDirection(){return myPointDirection;}
 
     public void hyperSpace(){
-<<<<<<< HEAD
-     	myColor = color(255,opa-10);
         myDirectionY = myDirectionX = 0;
         myCenterX = (int)(Math.random()*(460)+1)+20;
      	myCenterY = (int)(Math.random()*(460)+1)+20;
      	for (int i=0; i < shine.length; i++)
      	shine[i].reset();
-    } 
-}
-=======
         myCenterX = (int)(Math.random()*(460)+1)+20;
      	myCenterY = (int)(Math.random()*(460)+1)+20;
         myPointDirection = (int)(Math.random()*360);
     } 
+}
 
->>>>>>> bbcd282bb307c3d90a0a957f290ed8454b951730
 

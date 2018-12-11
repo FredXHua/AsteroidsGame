@@ -34,7 +34,7 @@ public void draw()
 }
 public void collide(){
   for(int i = 0; i < rock.size(); i++){
-    if(dist(rock.get(i).getX(), rock.get(i).getY(), rocket.getX(), rocket.getY()) <= 20)
+    if(dist(rock.get(i).getX(), rock.get(i).getY(), rocket.getX(), rocket.getY()) <= (rock.get(i).s)*10) 
     rock.remove(i);
   }
 }
