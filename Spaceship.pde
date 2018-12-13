@@ -1,7 +1,7 @@
 class Spaceship extends Floater{
 	protected int opa;
     public Spaceship(){
-		myCenterX = myCenterY = 250;
+		myCenterX = myCenterY = 500;
         corners = 11;	
 		int[] xS = {16, 9, 1, -3, -11, -8, -8, -11, -3, 1, 9};
 		int[] yS = {0, -6, -5, -8, -7, -4, 4, 7, 8, 5, 6};
@@ -23,12 +23,8 @@ class Spaceship extends Floater{
 
     public void hyperSpace(){
         myDirectionY = myDirectionX = 0;
-        myCenterX = (int)(Math.random()*(460)+1)+20;
-     	myCenterY = (int)(Math.random()*(460)+1)+20;
-     	for (int i=0; i < shine.length; i++)
-     	shine[i].reset();
-        myCenterX = (int)(Math.random()*(460)+1)+20;
-     	myCenterY = (int)(Math.random()*(460)+1)+20;
+        myCenterX = (int)(Math.random()*(960)+1)+20;
+     	myCenterY = (int)(Math.random()*(960)+1)+20;
         myPointDirection = (int)(Math.random()*360);
     } 
 }

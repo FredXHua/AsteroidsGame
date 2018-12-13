@@ -5,7 +5,7 @@ boolean ePressed, wPressed, aPressed, sPressed, dPressed = false;
 
 public void setup() 
 {
-  size(500, 500);
+  size(1000,1000);
   frameRate(60);
   rocket = new Spaceship();
   shine = new Star[130];
@@ -35,12 +35,12 @@ public void draw()
 public void collide(){
   for(int i = 0; i < rock.size(); i++){
     if(dist(rock.get(i).getX(), rock.get(i).getY(), rocket.getX(), rocket.getY()) <= (rock.get(i).s)*10) 
-    rock.remove(i);
+    System.out.println("O");
   }
 }
 public void keyPressed(){
   if (key == 'e') {
-    rocket.hyperSpace(); 
+    rocket.hyperSpace();
   }
   if (key == 'w') {
     wPressed = true;

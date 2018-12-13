@@ -2,8 +2,8 @@ class Asteroids extends Floater{
     public int rotateSpeed;
     public int s  = (int)(Math.random()*4)+2;
 public Asteroids(){
-    myCenterX = (int)(Math.random()*500);
-    myCenterY = (int)(Math.random()*500);
+    myCenterX = (int)(Math.random()*1000);
+    myCenterY = (int)(Math.random()*1000);
     corners = 6;
     int[] xS = {(-5*s),(5*s),(8*s),(5*s),(-5*s),(-8*s)};
     int[] yS = {(5*s),(5*s),(0*s),(-5*s),(-5*s),(0*s)};
@@ -28,5 +28,11 @@ public void move(){
     turn(rotateSpeed); 
     super.move();
     }
+public void hyperSpace(){
+    myDirectionY = myDirectionX = 0;
+    myCenterX = (int)(Math.random()*(960)+1)+20;
+    myCenterY = (int)(Math.random()*(960)+1)+20;
+    myPointDirection = (int)(Math.random()*360);
+}
 }
 
