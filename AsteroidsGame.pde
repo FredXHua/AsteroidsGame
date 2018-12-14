@@ -1,6 +1,7 @@
 Star[] shine;
 Spaceship rocket;
 ArrayList <Asteroids> rock;
+ArrayList <Bullet> shots;
 boolean ePressed, wPressed, aPressed, sPressed, dPressed = false;
 
 public void setup() 
@@ -14,6 +15,8 @@ public void setup()
     shine[i] = new Star();
   for(int n = 0; n < 15; n++)
     rock.add(new Asteroids());
+  for(int s = 0; s < 1; s++)
+    shots.add(new Bullet(Spaceship);
 }
 public void draw() 
 {
@@ -28,6 +31,8 @@ public void draw()
   rock.get(n).show();
   rock.get(n).move();   
  }
+  for(int s = 0; n < shots.size(); s++)
+  shots.get(s).show();
   rocket.show();
   rocket.move();
   collide();
